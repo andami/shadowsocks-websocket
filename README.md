@@ -1,13 +1,13 @@
-shadowsocks-dotcloud
+shadowsocks-websocket
 ===========
 
 [![Build Status](https://travis-ci.org/clowwindy/shadowsocks-dotcloud.png)](https://travis-ci.org/clowwindy/shadowsocks-dotcloud)
 
-shadowsocks-dotcloud is a lightweight tunnel proxy which can help you get through
+shadowsocks-websocket is a lightweight tunnel proxy which can help you get through
  firewalls. It is a port of [shadowsocks](https://github.com/clowwindy/shadowsocks), but
  through a different protocol.
 
-shadowsocks-dotcloud uses WebSockets instead of raw sockets,
+shadowsocks-websocket uses WebSockets instead of raw sockets,
  so it can be deployed on [dotcloud](https://www.dotcloud.com/).
 
 Notice that the protocol is INCOMPATIBLE with the origin shadowsocks.
