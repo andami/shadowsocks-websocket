@@ -50,7 +50,7 @@ for k, v of configFromArgs
   config[k] = v
 timeout = Math.floor(config.timeout * 1000)
 portPassword = config.port_password
-PORT = 8080
+PORT = config.remote_port
 KEY = config.password
 METHOD = config.method
 #SERVER = config.server
