@@ -1,53 +1,30 @@
 shadowsocks-websocket
 ===========
 
-[![Build Status](https://travis-ci.org/clowwindy/shadowsocks-dotcloud.png)](https://travis-ci.org/clowwindy/shadowsocks-dotcloud)
-
 shadowsocks-websocket is a lightweight tunnel proxy which can help you get through
  firewalls. It is a port of [shadowsocks](https://github.com/clowwindy/shadowsocks), but
- through a different protocol.
-
-shadowsocks-websocket uses WebSockets instead of raw sockets,
- so it can be deployed on [dotcloud](https://www.dotcloud.com/).
+ through a different protocol; shadowsocks-websocket uses WebSockets instead of raw sockets.
 
 Notice that the protocol is INCOMPATIBLE with the origin shadowsocks.
 
-usage
+Usage
 -----------
 
-Sign up for [dotcloud](https://www.dotcloud.com/).
+*Use nodejs v0.8.x or v0.6.x, don't use v0.10.x!*
 
-Install [dotcloud CLI](https://docs.dotcloud.com/0.9/firststeps/install/).
+Put the code somewhere, for example shadowsocks-websocket/. Edit `shadowsocks/config.json`, change the following values:
 
-Put the code somewhere, for example shadowsocks-dotcloud/. Edit `shadowsocks/config.json`, change the following values:
-
-    server          your server hostname, for example, shadowsocks-YOURUSERNAME.dotcloud.com
+    server          your server hostname, for example, your-server.com
+    remote_port     remote port, where server listens for clients
     local_port      local port
     password        a password used to encrypt transfer
     timeout         in seconds
     method          encryption method, null by default, or use "rc4"
 
-Upload the code. You can choose your own app name other than `shadowsocks`. You'll see your hostname at the end.
+Upload the code to your server, and run `node server.js`.
 
-    $ dotcloud create shadowsocks
-    Created application "shadowsocks" using the flavor "sandbox"
-    ...
-    $ dotcloud push --application shadowsocks shadowsocks-dotcloud/
-    # upload shadowsocks-dotcloud/ ssh://dotcloud@uploader.dotcloud.com:443/shadowsocks
-    ...
-    Deployment finished. Your application is available at the following URLs
-    www: http://shadowsocks-YOURUSERNAME.dotcloud.com/
-
-Open terminal, cd into shadowsocks, run `node local.js`.
+On client, open terminal, cd into shadowsocks-websocket, run `node local.js`.
 
 Change proxy settings of your browser into
 
     SOCKS5 127.0.0.1:local_port
-
-
-troubleshooting
-----------------
-
-If there is something wrong, you can check the logs by:
-
-    $ dotcloud logs www --application shadowsocks
