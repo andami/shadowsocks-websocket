@@ -53,7 +53,7 @@
 
   portPassword = config.port_password;
 
-  PORT = 8080;
+  PORT = config.remote_port;
 
   KEY = config.password;
 
