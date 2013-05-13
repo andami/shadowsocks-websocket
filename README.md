@@ -10,7 +10,8 @@ Notice that the protocol is INCOMPATIBLE with the origin shadowsocks.
 Usage
 -----------
 
-*Use nodejs v0.8.x or v0.6.x, don't use v0.10.x!*
+_Use nodejs v0.8.x or v0.6.x, don't use v0.10.x!_
+*Now compatible with nodejs v0.10.x*
 
 Put the code somewhere, for example shadowsocks-websocket/. Edit `shadowsocks/config.json`, change the following values:
 
