@@ -27,6 +27,6 @@ Upload the code to your server, and run `node server.js`.
 
 On client, open terminal, cd into shadowsocks-websocket, run `node local.js`.
 
-Change proxy settings of your browser into
+Change proxy settings of your browser or any application into
 
     SOCKS5 127.0.0.1:local_port
