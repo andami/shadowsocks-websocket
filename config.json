@@ -1,8 +1,8 @@
 {
-    "server":["projectname-username.dotcloud.com"],
-    "remote_port":8080,
+    "server":["https://alireza-shadowsock.herokuapp.com"],
+    "remote_port":80,
     "local_port":1080,
-    "password":"`try*(^^$some^$%^complex>:<>?~password/",
+    "password":"alireza",
     "timeout":600,
-    "method":null
+    "method":"rc4"
 }
